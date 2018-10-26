@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社会学系非官方技术部</title>
+    <link rel="icon" href="Img/University.png">
+    <link rel="stylesheet" type="text/css" href="CSS/CSS.css">
+    <script type="text/javascript" src="JS/Bmob-1.6.4.min.js">
+        Bmob.initialize("dfb4ad13545dc233bcc8f6629df05694","f71cc3a877d9fbaf26329836a7f3f580")
+    </script>
+</head>
+<body>
+
+<div id="Header">
+
+    <div class="University" align="center">
+            <h1>河南财经政法大学社会学系 Q/A 计算机问答知识交流中心</h1>
+    </div>
+</div>
+    <div class="Students">
+        <table border="1" width="800" cellspacing="0">
+            <tr>
+                <th width="200">专业(社会学/社会工作)</th>
+                <th width="200">姓名</th>
+                <th width="400">计算机上课问题(不懂或者有疑问的地方)</th>
+            </tr>
+        </table>
+
+        <form class="Input">
+
+            <strong>专业：</strong>
+            <input id="profession" style="width:743px;height:26px" type="text" name="StudentName" style="" placeholder="请输入你的专业">
+            <br>
+            <strong>姓名：</strong>
+            <input id="name" style="width:743px;height:26px;margin-top: 10px" type="text" name="StudentName" style="" placeholder="请输入你的姓名">
+            <br>
+            <textarea id="ask" placeholder="请输入你的问题" style="width:743px;height:60px;margin-top: 10px;margin-left: 52px" >
+
+            </textarea>
+            <br>
+            <button style="margin-top: 20px;margin-left: 52px" type="button" onclick="sent()">
+            填写完毕 准备提交
+            </button>
+        </form>
+
+
+
+        <script>
+
+
+            function sent() {
+
+                let profession = document.getElementById("profession").value;
+                let name = document.getElementById("name").value;
+                let ask = document.getElementById("ask").value;
+                if (profession == null) {
+                    alert("请完整填写专业");
+                    return;
+                }
+                if (name == null) {
+                    alert("请完整填写姓名");
+                    return;
+                }
+                if (ask == null) {
+                    alert("请完整填写问题");
+                    return;
+                }
+
+            }
+        </script>
+    </div>
+
+    <div class="Questions">
+
+    </div>
+</body>
+</html>
